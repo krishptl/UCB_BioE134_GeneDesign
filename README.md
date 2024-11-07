@@ -19,7 +19,9 @@ UCB_BioE134_GeneDesign/
 │   ├── checkers/
 │   │   ├── codon_checker.py
 │   │   ├── forbidden_sequence_checker.py
+│   │   ├── gc_content_checker.py
 │   │   ├── hairpin_checker.py
+│   │   ├── forbidden_sequence_checker.py
 │   │   └── internal_promoter_checker.py
 │   ├── data/
 │   │   └── codon_usage.txt
@@ -43,6 +45,7 @@ UCB_BioE134_GeneDesign/
 │       ├── checkers/
 │       │   ├── test_codon_checker.py
 │       │   ├── test_forbidden_sequence_checker.py
+│       │   ├── test_gc_content_checker.py
 │       │   ├── test_internal_promoter_checker.py
 │       ├── designer/
 │       │   ├── test_operon_designer.py
@@ -69,6 +72,7 @@ UCB_BioE134_GeneDesign/
 - **checkers/**: Contains sequence validation modules that ensure the designed constructs are free from errors and potential regulatory issues.
   - `codon_checker.py`: Validates the codon usage in a sequence, checking codon diversity, rare codon count, and calculating the Codon Adaptation Index (CAI) to ensure the sequence is optimized for the host organism.
   - `forbidden_sequence_checker.py`: Detects forbidden sequences that may interfere with proper gene function, including restriction sites or undesired motifs.
+  - `gc_content_checker.py`: Calculates the GC content of a DNA sequence to ensure it falls within a biologically optimal range, helping to maintain sequence stability and efficient expression in the target organism.
   - `hairpin_checker.py`: Detects secondary structures like hairpins in the sequence, which can cause issues in gene expression.
   - `internal_promoter_checker.py`: Detects internal promoter sequences that could lead to unintended gene expression within the construct.
 
